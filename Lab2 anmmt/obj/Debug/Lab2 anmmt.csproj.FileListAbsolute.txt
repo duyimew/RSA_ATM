@@ -1,0 +1,48 @@
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe.config
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.pdb
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.AssemblyReference.cache
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Lab2.resources
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Properties.Resources.resources
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task11.resources
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.GenerateResource.cache
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
+C:\Users\sangd\source\repos\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task22.resources
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe.config
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.pdb
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.AssemblyReference.cache
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Lab2.resources
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Properties.Resources.resources
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task11.resources
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task22.resources
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.GenerateResource.cache
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
+C:\Users\sangd\Downloads\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
+D:\New folder\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe.config
+D:\New folder\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe
+D:\New folder\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.pdb
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.AssemblyReference.cache
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Lab2.resources
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Properties.Resources.resources
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task11.resources
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task22.resources
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.GenerateResource.cache
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
+D:\New folder\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe.config
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\bin\Debug\Lab2 anmmt.pdb
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.AssemblyReference.cache
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Lab2.resources
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Properties.Resources.resources
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task11.resources
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task22.resources
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.GenerateResource.cache
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
+C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
