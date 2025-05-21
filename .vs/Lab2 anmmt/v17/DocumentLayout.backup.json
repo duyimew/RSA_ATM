@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|d:\\study material\\atmmt - nt101.p21\\laab\\doanrsa\\lab2 anmmt\\rsa_atm\\lab2 anmmt\\task22.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\task22.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|d:\\study material\\atmmt - nt101.p21\\laab\\doanrsa\\lab2 anmmt\\rsa_atm\\lab2 anmmt\\rsa\u0026\u0026playfair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\rsa\u0026\u0026playfair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\lab2 anmmt\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\lab2 anmmt\\task22.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\task22.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|d:\\study material\\atmmt - nt101.p21\\laab\\doanrsa\\lab2 anmmt\\rsa_atm\\lab2 anmmt\\task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|d:\\study material\\atmmt - nt101.p21\\laab\\doanrsa\\lab2 anmmt\\rsa_atm\\lab2 anmmt\\rsa\u0026\u0026playfair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\rsa\u0026\u0026playfair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\lab2 anmmt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|d:\\study material\\atmmt - nt101.p21\\laab\\doanrsa\\lab2 anmmt\\rsa_atm\\lab2 anmmt\\task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|d:\\study material\\atmmt - nt101.p21\\laab\\doanrsa\\lab2 anmmt\\rsa_atm\\lab2 anmmt\\rsa_functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\rsa_functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\lab2 anmmt\\task22.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\task22.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\lab2 anmmt\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|d:\\study material\\atmmt - nt101.p21\\laab\\doanrsa\\lab2 anmmt\\rsa_atm\\lab2 anmmt\\rsa\u0026\u0026playfair.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC886261-D4D2-48E3-872D-E7205D151260}|Lab2 anmmt\\Lab2 anmmt.csproj|solutionrelative:lab2 anmmt\\rsa\u0026\u0026playfair.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,33 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Task11.cs [Design]",
-              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task11.cs",
-              "RelativeDocumentMoniker": "Lab2 anmmt\\Task11.cs",
-              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task11.cs [Design]",
-              "RelativeToolTip": "Lab2 anmmt\\Task11.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T08:28:40.16Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Task11.cs",
-              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task11.cs",
-              "RelativeDocumentMoniker": "Lab2 anmmt\\Task11.cs",
-              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task11.cs",
-              "RelativeToolTip": "Lab2 anmmt\\Task11.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T08:28:26.116Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
@@ -79,31 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Lab2.cs [Design]",
-              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Lab2.cs",
-              "RelativeDocumentMoniker": "Lab2 anmmt\\Lab2.cs",
-              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Lab2.cs [Design]",
-              "RelativeToolTip": "Lab2 anmmt\\Lab2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T06:53:21.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Task22.Designer.cs",
-              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task22.Designer.cs",
-              "RelativeDocumentMoniker": "Lab2 anmmt\\Task22.Designer.cs",
-              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task22.Designer.cs",
-              "RelativeToolTip": "Lab2 anmmt\\Task22.Designer.cs",
-              "ViewState": "AgIAAKEBAAAAAAAAAAAUwLgBAAAkAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "RSA\u0026\u0026Playfair.Designer.cs",
+              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA\u0026\u0026Playfair.Designer.cs",
+              "RelativeDocumentMoniker": "Lab2 anmmt\\RSA\u0026\u0026Playfair.Designer.cs",
+              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA\u0026\u0026Playfair.Designer.cs*",
+              "RelativeToolTip": "Lab2 anmmt\\RSA\u0026\u0026Playfair.Designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T05:35:55.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Program.cs",
               "RelativeDocumentMoniker": "Lab2 anmmt\\Program.cs",
@@ -116,38 +68,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Task22.cs",
-              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task22.cs",
-              "RelativeDocumentMoniker": "Lab2 anmmt\\Task22.cs",
-              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task22.cs*",
-              "RelativeToolTip": "Lab2 anmmt\\Task22.cs*",
-              "ViewState": "AgIAAOcAAAAAAAAAAAAAAAwBAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RSA\u0026\u0026Playfair.cs",
+              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA\u0026\u0026Playfair.cs",
+              "RelativeDocumentMoniker": "Lab2 anmmt\\RSA\u0026\u0026Playfair.cs",
+              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA\u0026\u0026Playfair.cs*",
+              "RelativeToolTip": "Lab2 anmmt\\RSA\u0026\u0026Playfair.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T08:34:59.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Functions.cs",
-              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Functions.cs",
-              "RelativeDocumentMoniker": "Lab2 anmmt\\Functions.cs",
-              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Functions.cs",
-              "RelativeToolTip": "Lab2 anmmt\\Functions.cs",
-              "ViewState": "AgIAANYAAAAAAAAAAAAWwOUAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "RSA_Functions.cs",
+              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA_Functions.cs",
+              "RelativeDocumentMoniker": "Lab2 anmmt\\RSA_Functions.cs",
+              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA_Functions.cs",
+              "RelativeToolTip": "Lab2 anmmt\\RSA_Functions.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAOUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T05:16:06.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Task22.cs [Design]",
-              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task22.cs",
-              "RelativeDocumentMoniker": "Lab2 anmmt\\Task22.cs",
-              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\Task22.cs [Design]*",
-              "RelativeToolTip": "Lab2 anmmt\\Task22.cs [Design]*",
+              "DocumentIndex": 0,
+              "Title": "RSA\u0026\u0026Playfair.cs [Design]",
+              "DocumentMoniker": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA\u0026\u0026Playfair.cs",
+              "RelativeDocumentMoniker": "Lab2 anmmt\\RSA\u0026\u0026Playfair.cs",
+              "ToolTip": "D:\\Study material\\ATMMT - NT101.P21\\laab\\DoAnRSA\\Lab2 anmmt\\RSA_ATM\\Lab2 anmmt\\RSA\u0026\u0026Playfair.cs [Design]*",
+              "RelativeToolTip": "Lab2 anmmt\\RSA\u0026\u0026Playfair.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T08:34:57.329Z",
               "EditorCaption": " [Design]"

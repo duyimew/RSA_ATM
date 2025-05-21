@@ -16,7 +16,7 @@ namespace Lab2_anmmt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Task22());
+            Application.Run(new RSAPlayfair());
         }
     }
 }

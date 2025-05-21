@@ -14,10 +14,12 @@ using System.Windows.Forms;
 
 namespace Lab2_anmmt
 {
-    public partial class Task22 : Form
+    public partial class RSAPlayfair : Form
     {
-        Functions RSA = new Functions();
-        public Task22()
+        RSA_Functions RSA = new RSA_Functions();
+        
+        public char[,] playfairMatrix;
+        public RSAPlayfair()
         {
             InitializeComponent();
             
@@ -364,20 +366,201 @@ namespace Lab2_anmmt
             return null;
         }
 
-
-        private void btn_CalculateValues_Click(object sender, EventArgs e)
+        //*******************************************************************************************************************************
+        //PLAYFAIR CODE SECTION 
+        //*******************************************************************************************************************************
+        private void DisplayMatrix()
         {
+            int size = 5;
+            tbl_Matrix.RowCount = size;
+            tbl_Matrix.ColumnCount = size;
+            tbl_Matrix.Controls.Clear();
 
+            string key = textBox1.Text;
+            playfairMatrix = CreatePlayfairMatrix(key);
+
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    Label lbl = new Label();
+                    lbl.Text = playfairMatrix[i, j].ToString();
+                    lbl.Dock = DockStyle.Fill;
+                    lbl.TextAlign = ContentAlignment.MiddleCenter;
+                    lbl.BorderStyle = BorderStyle.FixedSingle;
+                    tbl_Matrix.Controls.Add(lbl, j, i);
+                }
+            }
         }
+
+        public char[,] CreatePlayfairMatrix(string key)
+        {
+            key = key.ToUpper().Replace("J", "I");
+            string alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+            string uniqueKey = "";
+
+            foreach (char c in key)
+            {
+                if (!uniqueKey.Contains(c) && alphabet.Contains(c)) //Kiểm tra kí tự có tồn tại trong chuỗi uniqueKey chưa 
+                    uniqueKey += c;                                    // và xem nó phải là chữ cái trong bảng chữ cái 25 kí tự hay không
+            }
+
+            foreach (char c in alphabet)
+            {
+                if (!uniqueKey.Contains(c)) // Sau khi đã thêm chuỗi key vào đằng trước rồi thì những kí tự còn lại sẽ được đề vào sau
+                    uniqueKey += c;
+            }
+
+            char[,] matrix = new char[5, 5];
+            int index = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    matrix[i, j] = uniqueKey[index++]; //Tạo 1 ma trận 5x5 có các tự của key và các chữ cái còn lại không nằm trong key
+                }
+            }
+            return matrix;
+        }
+
 
         private void Encrypt_click(object sender, EventArgs e)
         {
 
+            string plaintext = rtb_PlayfairInput.Text;
+
+            string pairsText = GeneratePairs(plaintext);
+            rtb_PlayfairPairs.Text = pairsText;
+
+            rtb_PlayfairOutput.Text = EnorDePairs(pairsText, true);
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Decrypt_Click(object sender, EventArgs e)
         {
+            string cipertext = rtb_PlayfairInput.Text;
+            string pairsText = GeneratePairs(cipertext);
+            rtb_PlayfairPairs.Text = pairsText;
+            rtb_PlayfairOutput.Text = EnorDePairs(pairsText, false);
 
+        }
+
+        private string EnorDePairs(string pairsText, bool EnorDe)
+        {
+            string[] pairs = pairsText.Split(' ');
+            string result = "";
+
+            foreach (var pair in pairs)
+            {
+                result += EnorDePlayfair(pair[0], pair[1], EnorDe) + " ";
+            }
+
+            return result.Trim();
+        }
+
+        private string EnorDePlayfair(char a, char b, bool EnorDe)
+        {
+            int rowA = 0, colA = 0, rowB = 0, colB = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (playfairMatrix[i, j] == a) // Xét trong cặp kí tự, tìm kiếm kí tự đầu tiên trong ma trận
+                    {
+                        rowA = i;
+                        colA = j;
+                    }
+                    if (playfairMatrix[i, j] == b) // Tìm trong kí tự thứ 2 trong cặp kí tự
+                    {
+                        rowB = i;
+                        colB = j;
+                    }
+                }
+            }
+            // Chia ra 3 trường hợp của Playfair: Cùng hàng; cùng cột; khác hàng khác cột
+            if (rowA == rowB) //Trường hợp cùng hàng
+            {
+                if (EnorDe)
+                {
+                    colA = (colA + 1) % 5;
+                    colB = (colB + 1) % 5;
+                }
+                else
+                {
+                    colA = (5 + colA - 1) % 5;
+                    colB = (5 + colB - 1) % 5;
+                }
+            }
+            else if (colA == colB) //Trường hợp cùng cột 
+            {
+                if (EnorDe)
+                {
+                    rowA = (rowA + 1) % 5;
+                    rowB = (rowB + 1) % 5;
+                }
+                else
+                {
+                    rowA = (5 + rowA - 1) % 5;
+                    rowB = (5 + rowB - 1) % 5;
+                }
+            }
+            else // Trường hợp khác hàng khác cột
+            {
+                int temp = colA;
+                colA = colB;
+                colB = temp;
+            }
+
+            return playfairMatrix[rowA, colA].ToString() + playfairMatrix[rowB, colB].ToString();
+        }
+
+        private string GeneratePairs(string text)
+        {
+            text = text.ToUpper().Replace("J", "I"); // Chuyển thành chữ hoa và thay J thành I
+            StringBuilder formattedText = new StringBuilder();
+
+            // Loại bỏ ký tự không phải chữ cái
+            foreach (char c in text)
+            {
+                if (char.IsLetter(c))
+                    formattedText.Append(c);
+            }
+
+            List<string> pairs = new List<string>();
+            int i = 0;
+
+            // Chia thành từng cặp ký tự
+            while (i < formattedText.Length)
+            {
+                char first = formattedText[i];
+                char second = (i + 1 < formattedText.Length) ? formattedText[i + 1] : 'X'; // Nếu lẻ thì thêm X
+
+                if (first == second)
+                {
+                    // Nếu hai ký tự giống nhau, chèn 'X' vào giữa và đẩy ký tự thứ hai sang cặp sau
+                    pairs.Add($"{first}X");
+                    i++; // Giữ nguyên vị trí ký tự thứ hai để xử lý lại trong vòng lặp
+                }
+                else
+                {
+                    pairs.Add($"{first}{second}");
+                    i += 2;
+                }
+            }
+
+            return string.Join(" ", pairs); // Ghép lại thành chuỗi kết quả
+        }
+
+        private void Task22_Load(object sender, EventArgs e)
+        {
+            DisplayMatrix();
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            DisplayMatrix();  //Mỗi lần nhập một kí tự mới vào ô textbox để dành nhập key thì sẽ cập nhật lại ma trận
         }
     }
 }

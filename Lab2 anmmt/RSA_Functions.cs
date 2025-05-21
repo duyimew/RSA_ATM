@@ -11,7 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Lab2_anmmt
 {
-    public class Functions
+    public class RSA_Functions
     {
         public BigInteger CalculatePhi_N(BigInteger p, BigInteger q)
         {
