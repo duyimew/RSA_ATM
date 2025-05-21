@@ -30,11 +30,11 @@
         {
             this.btn_Random = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tb_valueE = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_valueQ = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_valueP = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -61,6 +61,13 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tb_valuePhi_n = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tb_valueD = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tb_valueN = new System.Windows.Forms.TextBox();
+            this.btn_CalculateValues = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -69,9 +76,9 @@
             // 
             // btn_Random
             // 
-            this.btn_Random.Location = new System.Drawing.Point(706, 11);
+            this.btn_Random.Location = new System.Drawing.Point(909, 3);
             this.btn_Random.Name = "btn_Random";
-            this.btn_Random.Size = new System.Drawing.Size(82, 23);
+            this.btn_Random.Size = new System.Drawing.Size(82, 36);
             this.btn_Random.TabIndex = 13;
             this.btn_Random.Text = "Random";
             this.btn_Random.UseVisualStyleBackColor = true;
@@ -81,53 +88,53 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(514, 17);
+            this.label3.Location = new System.Drawing.Point(68, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 16);
             this.label3.TabIndex = 12;
             this.label3.Text = "e";
             // 
-            // textBox3
+            // tb_valueE
             // 
-            this.textBox3.Location = new System.Drawing.Point(535, 14);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
-            this.textBox3.TabIndex = 11;
+            this.tb_valueE.Location = new System.Drawing.Point(88, 55);
+            this.tb_valueE.Name = "tb_valueE";
+            this.tb_valueE.Size = new System.Drawing.Size(286, 20);
+            this.tb_valueE.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(314, 17);
+            this.label2.Location = new System.Drawing.Point(68, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(15, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "q";
             // 
-            // textBox2
+            // tb_valueQ
             // 
-            this.textBox2.Location = new System.Drawing.Point(335, 14);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 9;
+            this.tb_valueQ.Location = new System.Drawing.Point(88, 29);
+            this.tb_valueQ.Name = "tb_valueQ";
+            this.tb_valueQ.Size = new System.Drawing.Size(286, 20);
+            this.tb_valueQ.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 17);
+            this.label1.Location = new System.Drawing.Point(68, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "p";
             // 
-            // textBox1
+            // tb_valueP
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 7;
+            this.tb_valueP.Location = new System.Drawing.Point(88, 3);
+            this.tb_valueP.Name = "tb_valueP";
+            this.tb_valueP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tb_valueP.Size = new System.Drawing.Size(286, 20);
+            this.tb_valueP.TabIndex = 7;
             // 
             // radioButton1
             // 
@@ -153,25 +160,25 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 99);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 141);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(317, 339);
+            this.richTextBox1.Size = new System.Drawing.Size(430, 459);
             this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(354, 99);
+            this.richTextBox2.Location = new System.Drawing.Point(462, 141);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(317, 339);
+            this.richTextBox2.Size = new System.Drawing.Size(430, 459);
             this.richTextBox2.TabIndex = 17;
             this.richTextBox2.Text = "";
             // 
             // btn_Encrypt
             // 
-            this.btn_Encrypt.Location = new System.Drawing.Point(706, 99);
+            this.btn_Encrypt.Location = new System.Drawing.Point(908, 141);
             this.btn_Encrypt.Name = "btn_Encrypt";
-            this.btn_Encrypt.Size = new System.Drawing.Size(82, 23);
+            this.btn_Encrypt.Size = new System.Drawing.Size(97, 31);
             this.btn_Encrypt.TabIndex = 18;
             this.btn_Encrypt.Text = "Encrypt";
             this.btn_Encrypt.UseVisualStyleBackColor = true;
@@ -179,9 +186,9 @@
             // 
             // btn_Decrypt
             // 
-            this.btn_Decrypt.Location = new System.Drawing.Point(706, 139);
+            this.btn_Decrypt.Location = new System.Drawing.Point(909, 183);
             this.btn_Decrypt.Name = "btn_Decrypt";
-            this.btn_Decrypt.Size = new System.Drawing.Size(82, 23);
+            this.btn_Decrypt.Size = new System.Drawing.Size(97, 32);
             this.btn_Decrypt.TabIndex = 18;
             this.btn_Decrypt.Text = "Decrypt";
             this.btn_Decrypt.UseVisualStyleBackColor = true;
@@ -191,7 +198,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(350, 65);
+            this.label4.Location = new System.Drawing.Point(458, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 19;
@@ -201,7 +208,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 65);
+            this.label5.Location = new System.Drawing.Point(19, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 19;
@@ -243,7 +250,7 @@
             this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Location = new System.Drawing.Point(60, 50);
+            this.groupBox1.Location = new System.Drawing.Point(71, 92);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 43);
             this.groupBox1.TabIndex = 22;
@@ -267,7 +274,7 @@
             this.groupBox2.Controls.Add(this.radioButton6);
             this.groupBox2.Controls.Add(this.radioButton7);
             this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Location = new System.Drawing.Point(416, 50);
+            this.groupBox2.Location = new System.Drawing.Point(522, 91);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(255, 43);
             this.groupBox2.TabIndex = 23;
@@ -317,7 +324,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(688, 231);
+            this.textBox4.Location = new System.Drawing.Point(909, 285);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 24;
@@ -326,7 +333,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(684, 208);
+            this.label6.Location = new System.Drawing.Point(905, 262);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 16);
             this.label6.TabIndex = 25;
@@ -336,7 +343,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(684, 269);
+            this.label7.Location = new System.Drawing.Point(905, 323);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 27;
@@ -344,16 +351,16 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(688, 292);
+            this.textBox5.Location = new System.Drawing.Point(909, 346);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 26;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(685, 332);
+            this.label8.Location = new System.Drawing.Point(908, 386);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 109);
+            this.label8.Size = new System.Drawing.Size(109, 116);
             this.label8.TabIndex = 28;
             this.label8.Text = "Input size là Message/Ciphertext sẽ gom n byte lại thành 1 rồi cho mã hóa hoặc gi" +
     "ải mã cùng 1 lúc nếu không gom lại M/C rất nhỏ so với n";
@@ -362,16 +369,16 @@
             // 
             this.groupBox3.Controls.Add(this.radioButton2);
             this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Location = new System.Drawing.Point(5, -2);
+            this.groupBox3.Location = new System.Drawing.Point(12, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(67, 53);
+            this.groupBox3.Size = new System.Drawing.Size(51, 53);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.checkBox1);
-            this.groupBox4.Location = new System.Drawing.Point(688, 168);
+            this.groupBox4.Location = new System.Drawing.Point(909, 222);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(100, 37);
             this.groupBox4.TabIndex = 30;
@@ -387,11 +394,83 @@
             this.checkBox1.Text = "Override";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(380, 56);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 16);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "phi_n";
+            // 
+            // tb_valuePhi_n
+            // 
+            this.tb_valuePhi_n.Location = new System.Drawing.Point(424, 55);
+            this.tb_valuePhi_n.Name = "tb_valuePhi_n";
+            this.tb_valuePhi_n.ReadOnly = true;
+            this.tb_valuePhi_n.Size = new System.Drawing.Size(468, 20);
+            this.tb_valuePhi_n.TabIndex = 35;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(404, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(15, 16);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "d";
+            // 
+            // tb_valueD
+            // 
+            this.tb_valueD.Location = new System.Drawing.Point(424, 29);
+            this.tb_valueD.Name = "tb_valueD";
+            this.tb_valueD.ReadOnly = true;
+            this.tb_valueD.Size = new System.Drawing.Size(468, 20);
+            this.tb_valueD.TabIndex = 33;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(404, 7);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(14, 16);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "n";
+            // 
+            // tb_valueN
+            // 
+            this.tb_valueN.Location = new System.Drawing.Point(424, 3);
+            this.tb_valueN.Name = "tb_valueN";
+            this.tb_valueN.ReadOnly = true;
+            this.tb_valueN.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tb_valueN.Size = new System.Drawing.Size(468, 20);
+            this.tb_valueN.TabIndex = 31;
+            // 
+            // btn_CalculateValues
+            // 
+            this.btn_CalculateValues.Location = new System.Drawing.Point(909, 45);
+            this.btn_CalculateValues.Name = "btn_CalculateValues";
+            this.btn_CalculateValues.Size = new System.Drawing.Size(82, 36);
+            this.btn_CalculateValues.TabIndex = 37;
+            this.btn_CalculateValues.Text = "Calculate";
+            this.btn_CalculateValues.UseVisualStyleBackColor = true;
+            this.btn_CalculateValues.Click += new System.EventHandler(this.btn_CalculateValues_Click);
+            // 
             // Task22
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1011, 612);
+            this.Controls.Add(this.btn_CalculateValues);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.tb_valuePhi_n);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.tb_valueD);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.tb_valueN);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label8);
@@ -409,11 +488,11 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btn_Random);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tb_valueE);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_valueQ);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_valueP);
             this.Name = "Task22";
             this.Text = "Task22";
             this.groupBox1.ResumeLayout(false);
@@ -433,11 +512,11 @@
 
         private System.Windows.Forms.Button btn_Random;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_valueE;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_valueQ;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_valueP;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -464,5 +543,12 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tb_valuePhi_n;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tb_valueD;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tb_valueN;
+        private System.Windows.Forms.Button btn_CalculateValues;
     }
 }

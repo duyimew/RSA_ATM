@@ -46,3 +46,15 @@ C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\ob
 C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
 C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
 C:\Users\truon\Documents\Zalo Received Files\Lab2 anmmt\Lab2 anmmt\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe.config
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\bin\Debug\Lab2 anmmt.pdb
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.AssemblyReference.cache
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Lab2.resources
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Properties.Resources.resources
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task11.resources
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task22.resources
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.GenerateResource.cache
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
+D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
