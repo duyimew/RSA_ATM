@@ -53,27 +53,9 @@ namespace Lab2_anmmt
 
                 //Tính n
                 BigInteger n = RSA.CalculateN(p, q);
-                
 
-                if (!radioButton1.Checked)
-                {
-                    // Nếu người dùng chọn "Hex", chuyển đổi từ Dec sang Hex
-                    tb_valueP.Text = RSA.ConvertNumber(decp, "dec", "hex"); 
-                    tb_valueQ.Text = RSA.ConvertNumber(decq, "dec", "hex"); 
-                    tb_valueE.Text = RSA.ConvertNumber(dece.ToString(), "dec", "hex");
-                    tb_valuePhi_n.Text = RSA.ConvertNumber(phi_n.ToString(), "dec", "hex");
-                    tb_valueD.Text = RSA.ConvertNumber(d.ToString(), "dec", "hex");
-                    tb_valueN.Text = RSA.ConvertNumber(n.ToString(), "dec", "hex");
-                }
-                else
-                {
-                    tb_valueP.Text = decp; 
-                    tb_valueQ.Text = decq; 
-                    tb_valueE.Text = dece.ToString();
-                    tb_valuePhi_n.Text = phi_n.ToString();
-                    tb_valueD.Text = d.ToString();
-                    tb_valueN.Text = n.ToString();
-                }
+                convertTypeForRandom(decp, decq, d.ToString(), n.ToString(), dece.ToString(), phi_n.ToString());
+                
             }
             catch(Exception ex)
             {
@@ -81,11 +63,51 @@ namespace Lab2_anmmt
             }
         }
         
+        public void convertTypeForRandom(string decp, string decq, string d, string n, string dece, string phi_n)
+        {
+            if (!radioButton1.Checked)
+            {
+                // Nếu người dùng chọn "Hex", chuyển đổi từ Dec sang Hex
+                tb_valueP.Text = RSA.ConvertNumber(decp, "dec", "hex");
+                tb_valueQ.Text = RSA.ConvertNumber(decq, "dec", "hex");
+                tb_valueE.Text = RSA.ConvertNumber(dece, "dec", "hex");
+                tb_valuePhi_n.Text = RSA.ConvertNumber(phi_n, "dec", "hex");
+                tb_valueD.Text = RSA.ConvertNumber(d, "dec", "hex");
+                tb_valueN.Text = RSA.ConvertNumber(n, "dec", "hex");
+            }
+            else
+            {
+                tb_valueP.Text = decp;
+                tb_valueQ.Text = decq;
+                tb_valueE.Text = dece;
+                tb_valuePhi_n.Text = phi_n;
+                tb_valueD.Text = d;
+                tb_valueN.Text = n;
+            }
+        }
+
+        public void convertTypeForEnOrDe( string d, string n, string phi_n)
+        {
+            if (!radioButton1.Checked)
+            {
+                // Nếu người dùng chọn "Hex", chuyển đổi từ Dec sang Hex
+                tb_valuePhi_n.Text = RSA.ConvertNumber(phi_n, "dec", "hex");
+                tb_valueD.Text = RSA.ConvertNumber(d, "dec", "hex");
+                tb_valueN.Text = RSA.ConvertNumber(n, "dec", "hex");
+            }
+            else
+            {
+                tb_valuePhi_n.Text = phi_n;
+                tb_valueN.Text = n;
+                tb_valueD.Text = d;
+            }
+        }
 
         private void btn_Encrypt_Click_1(object sender, EventArgs e)
         {
             try
             {
+
                 // 1. Lấy giá trị p, q, e từ giao diện
                 string sp = tb_valueP.Text;
                 string sq = tb_valueQ.Text;
@@ -107,6 +129,8 @@ namespace Lab2_anmmt
                     dece = BigInteger.Parse(se);
                 } // nếu là dec
 
+
+
                 if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
                 {
 
@@ -117,21 +141,13 @@ namespace Lab2_anmmt
                 BigInteger n = RSA.CalculateN(p, q);
                 BigInteger phi_n = RSA.CalculatePhi_N(p, q);
                 BigInteger d = RSA.CalculateD(dece, p, q);
-                tb_valuePhi_n.Text = phi_n.ToString();
-                tb_valueN.Text = n.ToString();
-                tb_valueD.Text = d.ToString();
+                convertTypeForEnOrDe(d.ToString(), n.ToString(), phi_n.ToString());
 
                 // 3. Xác định định dạng input và output từ radioButton
-                string typeinput = "";
-                if (radioButton3.Checked) typeinput = "Base64";
-                else if (radioButton4.Checked) typeinput = "bin";
-                else if (radioButton5.Checked) typeinput = "hex";
-                else if (radioButton9.Checked) typeinput = "ASCII";
-                string typeoutput = "";
-                if (radioButton7.Checked) typeoutput = "Base64";
-                else if (radioButton6.Checked) typeoutput = "bin";
-                else if (radioButton8.Checked) typeoutput = "hex";
-                else if (radioButton10.Checked) typeoutput = "ASCII";
+                string typeinput = getInputType();
+
+                string typeoutput = getOutputType();
+                
 
                 // 4. Chuyển thông điệp từ giao diện thành mảng byte[] dựa trên định dạng
                 string message = richTextBox1.Text;
@@ -223,9 +239,7 @@ namespace Lab2_anmmt
                 BigInteger p = 0;
                 BigInteger q = 0;
                 BigInteger eValue = 0;
-                BigInteger n = BigInteger.Parse(tb_valueN.Text);
-                BigInteger phi_n = BigInteger.Parse(tb_valuePhi_n.Text);
-                BigInteger d = BigInteger.Parse(tb_valueD.Text);
+                
                 if (!radioButton1.Checked)
                 {
                     p = BigInteger.Parse(RSA.ConvertNumber(sp, "hex", "dec"));
@@ -238,16 +252,22 @@ namespace Lab2_anmmt
                     q = BigInteger.Parse(sq);
                     eValue = BigInteger.Parse(se);
                 }
-                string typeinput = "";
-                if (radioButton3.Checked) typeinput = "Base64";
-                else if (radioButton4.Checked) typeinput = "bin";
-                else if (radioButton5.Checked) typeinput = "hex";
-                else if (radioButton9.Checked) typeinput = "ASCII";
-                string typeoutput = "";
-                if (radioButton7.Checked) typeoutput = "Base64";
-                else if (radioButton6.Checked) typeoutput = "bin";
-                else if (radioButton8.Checked) typeoutput = "hex";
-                else if (radioButton10.Checked) typeoutput = "ASCII";
+
+                if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
+                {
+
+                    return;
+                }
+
+
+                BigInteger n = RSA.CalculateN(p, q);
+                BigInteger phi_n = RSA.CalculatePhi_N(p, q);
+                BigInteger d = RSA.CalculateD(eValue, p, q);
+                convertTypeForEnOrDe(d.ToString(), n.ToString(), phi_n.ToString());
+
+                string typeinput = getInputType();
+                
+                string typeoutput = getOutputType();
 
                 string encryptedMessage = richTextBox1.Text;
 
@@ -326,10 +346,36 @@ namespace Lab2_anmmt
             }
         }
 
+        public string getInputType()
+        {
+            if (radioButton3.Checked) return "Base64";
+            else if (radioButton4.Checked) return "bin";
+            else if (radioButton5.Checked) return "hex";
+            else if (radioButton9.Checked) return "ASCII";
+            return null;
+        }
 
+        public string getOutputType()
+        {
+            if (radioButton7.Checked) return "Base64";
+            else if (radioButton6.Checked) return "bin";
+            else if (radioButton8.Checked) return "hex";
+            else if (radioButton10.Checked) return "ASCII";
+            return null;
+        }
 
 
         private void btn_CalculateValues_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Encrypt_click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

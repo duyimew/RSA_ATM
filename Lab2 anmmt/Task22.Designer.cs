@@ -68,15 +68,27 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tb_valueN = new System.Windows.Forms.TextBox();
             this.btn_CalculateValues = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Decrypt = new System.Windows.Forms.Button();
+            this.Encrypt = new System.Windows.Forms.Button();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Random
             // 
-            this.btn_Random.Location = new System.Drawing.Point(909, 3);
+            this.btn_Random.Location = new System.Drawing.Point(911, 7);
             this.btn_Random.Name = "btn_Random";
             this.btn_Random.Size = new System.Drawing.Size(82, 36);
             this.btn_Random.TabIndex = 13;
@@ -130,7 +142,7 @@
             // 
             // tb_valueP
             // 
-            this.tb_valueP.Location = new System.Drawing.Point(88, 3);
+            this.tb_valueP.Location = new System.Drawing.Point(88, 6);
             this.tb_valueP.Name = "tb_valueP";
             this.tb_valueP.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tb_valueP.Size = new System.Drawing.Size(286, 20);
@@ -160,9 +172,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 141);
+            this.richTextBox1.Location = new System.Drawing.Point(13, 141);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(430, 459);
+            this.richTextBox1.Size = new System.Drawing.Size(430, 438);
             this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
             // 
@@ -170,7 +182,7 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(462, 141);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(430, 459);
+            this.richTextBox2.Size = new System.Drawing.Size(430, 438);
             this.richTextBox2.TabIndex = 17;
             this.richTextBox2.Text = "";
             // 
@@ -369,7 +381,7 @@
             // 
             this.groupBox3.Controls.Add(this.radioButton2);
             this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(51, 53);
             this.groupBox3.TabIndex = 29;
@@ -442,7 +454,7 @@
             // 
             // tb_valueN
             // 
-            this.tb_valueN.Location = new System.Drawing.Point(424, 3);
+            this.tb_valueN.Location = new System.Drawing.Point(424, 6);
             this.tb_valueN.Name = "tb_valueN";
             this.tb_valueN.ReadOnly = true;
             this.tb_valueN.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -459,40 +471,140 @@
             this.btn_CalculateValues.UseVisualStyleBackColor = true;
             this.btn_CalculateValues.Click += new System.EventHandler(this.btn_CalculateValues_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(-5, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1022, 611);
+            this.tabControl1.TabIndex = 38;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.richTextBox1);
+            this.tabPage1.Controls.Add(this.btn_CalculateValues);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.tb_valuePhi_n);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.tb_valueD);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.tb_valueN);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.btn_Decrypt);
+            this.tabPage1.Controls.Add(this.btn_Encrypt);
+            this.tabPage1.Controls.Add(this.richTextBox2);
+            this.tabPage1.Controls.Add(this.btn_Random);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.tb_valueE);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.tb_valueQ);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.tb_valueP);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1014, 585);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "RSA ";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.Decrypt);
+            this.tabPage2.Controls.Add(this.Encrypt);
+            this.tabPage2.Controls.Add(this.richTextBox3);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1014, 585);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Playfair";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Decrypt
+            // 
+            this.Decrypt.Location = new System.Drawing.Point(781, 135);
+            this.Decrypt.Name = "Decrypt";
+            this.Decrypt.Size = new System.Drawing.Size(92, 30);
+            this.Decrypt.TabIndex = 11;
+            this.Decrypt.Text = "Decrypt";
+            this.Decrypt.UseVisualStyleBackColor = true;
+            // 
+            // Encrypt
+            // 
+            this.Encrypt.Location = new System.Drawing.Point(781, 73);
+            this.Encrypt.Name = "Encrypt";
+            this.Encrypt.Size = new System.Drawing.Size(92, 30);
+            this.Encrypt.TabIndex = 10;
+            this.Encrypt.Text = "Encrypt";
+            this.Encrypt.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(28, 258);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(440, 317);
+            this.richTextBox3.TabIndex = 9;
+            this.richTextBox3.Text = "";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(28, 37);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(296, 30);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(24, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 20);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Playfair key";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 73);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(296, 150);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
             // Task22
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 612);
-            this.Controls.Add(this.btn_CalculateValues);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.tb_valuePhi_n);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.tb_valueD);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.tb_valueN);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_Decrypt);
-            this.Controls.Add(this.btn_Encrypt);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.btn_Random);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tb_valueE);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_valueQ);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_valueP);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Task22";
             this.Text = "Task22";
             this.groupBox1.ResumeLayout(false);
@@ -503,8 +615,12 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -550,5 +666,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tb_valueN;
         private System.Windows.Forms.Button btn_CalculateValues;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button Decrypt;
+        private System.Windows.Forms.Button Encrypt;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
