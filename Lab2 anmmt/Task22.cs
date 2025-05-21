@@ -153,8 +153,12 @@ namespace Lab2_anmmt
                     // tự tính blockSize dựa trên độ dài của p và q
                     string hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex").TrimStart('0');
                     if (BigInteger.Parse(RSA.ConvertNumber(hexp, "hex", "dec")) != p) hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex");
+                    if (hexp.Length % 2 != 0)
+                        hexp = "0" + hexp;
                     string hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex").TrimStart('0');
                     if (BigInteger.Parse(RSA.ConvertNumber(hexq, "hex", "dec")) != q) hexq = RSA.ConvertNumber(p.ToString(), "dec", "hex");
+                    if (hexq.Length % 2 != 0)
+                        hexq = "0" + hexq;
                     blockSize = (hexp.Length + hexq.Length) / 2 - 1;
                 }
                 // 6. Mã hóa từng khối
@@ -263,8 +267,12 @@ namespace Lab2_anmmt
                 {
                     string hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex").TrimStart('0');
                     if (BigInteger.Parse(RSA.ConvertNumber(hexp, "hex", "dec")) != p) hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex");
+                    if (hexp.Length % 2 != 0)
+                        hexp = "0" + hexp;
                     string hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex").TrimStart('0');
                     if (BigInteger.Parse(RSA.ConvertNumber(hexq, "hex", "dec")) != q) hexq = RSA.ConvertNumber(p.ToString(), "dec", "hex");
+                    if (hexq.Length % 2 != 0)
+                        hexq = "0" + hexq;
                     partSize = (hexp.Length + hexq.Length) / 2;
                 }
                 List<byte[]> parts = new List<byte[]>();

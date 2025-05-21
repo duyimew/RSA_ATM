@@ -58,3 +58,15 @@ D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\o
 D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
 D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
 D:\Study material\ATMMT - NT101.P21\laab\DoAnRSA\Lab2 anmmt\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
+D:\Documents\RSA_ATM\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe.config
+D:\Documents\RSA_ATM\Lab2 anmmt\bin\Debug\Lab2 anmmt.exe
+D:\Documents\RSA_ATM\Lab2 anmmt\bin\Debug\Lab2 anmmt.pdb
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.AssemblyReference.cache
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Lab2.resources
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Properties.Resources.resources
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task11.resources
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2_anmmt.Task22.resources
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.GenerateResource.cache
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.csproj.CoreCompileInputs.cache
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.exe
+D:\Documents\RSA_ATM\Lab2 anmmt\obj\Debug\Lab2 anmmt.pdb
