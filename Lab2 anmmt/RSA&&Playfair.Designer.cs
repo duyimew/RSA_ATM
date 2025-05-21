@@ -81,6 +81,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tbl_Matrix = new System.Windows.Forms.TableLayoutPanel();
+            this.rb_5x5 = new System.Windows.Forms.RadioButton();
+            this.rb_6x6 = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -88,6 +91,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Random
@@ -517,6 +521,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label13);
@@ -633,22 +638,57 @@
             // 
             // tbl_Matrix
             // 
-            this.tbl_Matrix.ColumnCount = 5;
-            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tbl_Matrix.ColumnCount = 6;
+            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tbl_Matrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tbl_Matrix.Location = new System.Drawing.Point(28, 73);
             this.tbl_Matrix.Name = "tbl_Matrix";
-            this.tbl_Matrix.RowCount = 5;
+            this.tbl_Matrix.RowCount = 6;
             this.tbl_Matrix.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tbl_Matrix.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tbl_Matrix.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tbl_Matrix.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tbl_Matrix.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tbl_Matrix.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tbl_Matrix.Size = new System.Drawing.Size(296, 150);
             this.tbl_Matrix.TabIndex = 6;
+            // 
+            // rb_5x5
+            // 
+            this.rb_5x5.AutoSize = true;
+            this.rb_5x5.Checked = true;
+            this.rb_5x5.Location = new System.Drawing.Point(6, 19);
+            this.rb_5x5.Name = "rb_5x5";
+            this.rb_5x5.Size = new System.Drawing.Size(42, 17);
+            this.rb_5x5.TabIndex = 17;
+            this.rb_5x5.TabStop = true;
+            this.rb_5x5.Text = "5x5";
+            this.rb_5x5.UseVisualStyleBackColor = true;
+            // 
+            // rb_6x6
+            // 
+            this.rb_6x6.AutoSize = true;
+            this.rb_6x6.Location = new System.Drawing.Point(6, 42);
+            this.rb_6x6.Name = "rb_6x6";
+            this.rb_6x6.Size = new System.Drawing.Size(42, 17);
+            this.rb_6x6.TabIndex = 18;
+            this.rb_6x6.Text = "6x6";
+            this.rb_6x6.UseVisualStyleBackColor = true;
+            this.rb_6x6.CheckedChanged += new System.EventHandler(this.rb_6x6_CheckedChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rb_5x5);
+            this.groupBox5.Controls.Add(this.rb_6x6);
+            this.groupBox5.Location = new System.Drawing.Point(371, 83);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(97, 66);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
             // 
             // RSAPlayfair
             // 
@@ -672,6 +712,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -731,5 +773,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton rb_6x6;
+        private System.Windows.Forms.RadioButton rb_5x5;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

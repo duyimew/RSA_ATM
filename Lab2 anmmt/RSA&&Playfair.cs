@@ -135,7 +135,7 @@ namespace Lab2_anmmt
 
                 if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
                 {
-
+                    MessageBox.Show("Chỉ được sử dụng các số nguyên tố cho p và q.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -257,7 +257,7 @@ namespace Lab2_anmmt
 
                 if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
                 {
-
+                    MessageBox.Show("Chỉ được sử dụng các số nguyên tố cho p và q.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -369,15 +369,19 @@ namespace Lab2_anmmt
         //*******************************************************************************************************************************
         //PLAYFAIR CODE SECTION 
         //*******************************************************************************************************************************
+        
         private void DisplayMatrix()
         {
-            int size = 5;
+            bool useExtended = false;
+            if (rb_6x6.Checked) useExtended = true;
+            else useExtended = false;
+            int size = useExtended ?6:5;
             tbl_Matrix.RowCount = size;
             tbl_Matrix.ColumnCount = size;
             tbl_Matrix.Controls.Clear();
 
             string key = textBox1.Text;
-            playfairMatrix = CreatePlayfairMatrix(key);
+            playfairMatrix = CreatePlayfairMatrix(key, useExtended);
 
             for (int i = 0; i < size; i++)
             {
@@ -393,10 +397,13 @@ namespace Lab2_anmmt
             }
         }
 
-        public char[,] CreatePlayfairMatrix(string key)
+        public char[,] CreatePlayfairMatrix(string key, bool useExtended = false)
         {
             key = key.ToUpper().Replace("J", "I");
-            string alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+            //string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            string alphabet = useExtended
+            ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" // 6x6
+            : "ABCDEFGHIKLMNOPQRSTUVWXYZ";           // 5x5 (J bị loại bỏ)
             string uniqueKey = "";
 
             foreach (char c in key)
@@ -410,13 +417,13 @@ namespace Lab2_anmmt
                 if (!uniqueKey.Contains(c)) // Sau khi đã thêm chuỗi key vào đằng trước rồi thì những kí tự còn lại sẽ được đề vào sau
                     uniqueKey += c;
             }
-
-            char[,] matrix = new char[5, 5];
+            int size = useExtended ? 6 : 5;
+            char[,] matrix = new char[size, size];
             int index = 0;
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < size; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < size; j++)
                 {
                     matrix[i, j] = uniqueKey[index++]; //Tạo 1 ma trận 5x5 có các tự của key và các chữ cái còn lại không nằm trong key
                 }
@@ -427,9 +434,8 @@ namespace Lab2_anmmt
 
         private void Encrypt_click(object sender, EventArgs e)
         {
-
-            string plaintext = rtb_PlayfairInput.Text;
-
+            
+            string plaintext = rtb_PlayfairInput.Text;            
             string pairsText = GeneratePairs(plaintext);
             rtb_PlayfairPairs.Text = pairsText;
 
@@ -440,32 +446,31 @@ namespace Lab2_anmmt
         private void Decrypt_Click(object sender, EventArgs e)
         {
             string cipertext = rtb_PlayfairInput.Text;
-            string pairsText = GeneratePairs(cipertext);
-            rtb_PlayfairPairs.Text = pairsText;
-            rtb_PlayfairOutput.Text = EnorDePairs(pairsText, false);
-
+            rtb_PlayfairOutput.Text = EnorDePairs(cipertext, false);
         }
 
         private string EnorDePairs(string pairsText, bool EnorDe)
         {
             string[] pairs = pairsText.Split(' ');
             string result = "";
-
+            bool useExtended = false;
+            if (rb_6x6.Checked) useExtended = true;
+            else useExtended = false;
             foreach (var pair in pairs)
             {
-                result += EnorDePlayfair(pair[0], pair[1], EnorDe) + " ";
+                result += EnorDePlayfair(pair[0], pair[1], EnorDe, useExtended) + " ";
             }
 
             return result.Trim();
         }
 
-        private string EnorDePlayfair(char a, char b, bool EnorDe)
+        private string EnorDePlayfair(char a, char b, bool EnorDe, bool useExtended = false)
         {
             int rowA = 0, colA = 0, rowB = 0, colB = 0;
-
-            for (int i = 0; i < 5; i++)
+            int size = useExtended ? 6 : 5;
+            for (int i = 0; i < size; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < size; j++)
                 {
                     if (playfairMatrix[i, j] == a) // Xét trong cặp kí tự, tìm kiếm kí tự đầu tiên trong ma trận
                     {
@@ -484,26 +489,26 @@ namespace Lab2_anmmt
             {
                 if (EnorDe)
                 {
-                    colA = (colA + 1) % 5;
-                    colB = (colB + 1) % 5;
+                    colA = (colA + 1) % size;
+                    colB = (colB + 1) % size;
                 }
                 else
                 {
-                    colA = (5 + colA - 1) % 5;
-                    colB = (5 + colB - 1) % 5;
+                    colA = (size + colA - 1) % size;
+                    colB = (size + colB - 1) % size;
                 }
             }
             else if (colA == colB) //Trường hợp cùng cột 
             {
                 if (EnorDe)
                 {
-                    rowA = (rowA + 1) % 5;
-                    rowB = (rowB + 1) % 5;
+                    rowA = (rowA + 1) % size;
+                    rowB = (rowB + 1) % size;
                 }
                 else
                 {
-                    rowA = (5 + rowA - 1) % 5;
-                    rowB = (5 + rowB - 1) % 5;
+                    rowA = (size + rowA - 1) % size;
+                    rowB = (size + rowB - 1) % size;
                 }
             }
             else // Trường hợp khác hàng khác cột
@@ -518,7 +523,9 @@ namespace Lab2_anmmt
 
         private string GeneratePairs(string text)
         {
-            text = text.ToUpper().Replace("J", "I"); // Chuyển thành chữ hoa và thay J thành I
+            
+            text = text.ToUpper().Replace("J", "I"); // 5x5 cổ điển: thay J bằng I
+            
             StringBuilder formattedText = new StringBuilder();
 
             // Loại bỏ ký tự không phải chữ cái
@@ -561,6 +568,11 @@ namespace Lab2_anmmt
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
             DisplayMatrix();  //Mỗi lần nhập một kí tự mới vào ô textbox để dành nhập key thì sẽ cập nhật lại ma trận
+        }
+
+        private void rb_6x6_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayMatrix();
         }
     }
 }
