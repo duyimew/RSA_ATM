@@ -93,8 +93,7 @@ namespace Lab2_anmmt
                 BigInteger p = 0;
                 BigInteger q = 0;
                 BigInteger dece = 0;
-                BigInteger n = BigInteger.Parse(tb_valueN.Text);
-                BigInteger phi_n = BigInteger.Parse(tb_valuePhi_n.Text);
+                
                 if (!radioButton1.Checked)
                 {
                     p = BigInteger.Parse(RSA.ConvertNumber(sp, "hex", "dec"));
@@ -107,6 +106,20 @@ namespace Lab2_anmmt
                     q = BigInteger.Parse(sq);
                     dece = BigInteger.Parse(se);
                 } // nếu là dec
+
+                if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
+                {
+
+                    return;
+                }
+
+
+                BigInteger n = RSA.CalculateN(p, q);
+                BigInteger phi_n = RSA.CalculatePhi_N(p, q);
+                BigInteger d = RSA.CalculateD(dece, p, q);
+                tb_valuePhi_n.Text = phi_n.ToString();
+                tb_valueN.Text = n.ToString();
+                tb_valueD.Text = d.ToString();
 
                 // 3. Xác định định dạng input và output từ radioButton
                 string typeinput = "";
@@ -304,6 +317,9 @@ namespace Lab2_anmmt
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+
+
 
         private void btn_CalculateValues_Click(object sender, EventArgs e)
         {
