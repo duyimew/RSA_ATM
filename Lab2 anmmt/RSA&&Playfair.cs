@@ -230,6 +230,11 @@ namespace Lab2_anmmt
                         if (hexn.Length % 2 != 0)
                             hexn = "0" + hexn;
                         blockSize = (hexn.Length) / 2 - 1;
+                        if (blockSize == 0)
+                        {
+                            MessageBox.Show("BlockSize = 0 - RSA cannot work");
+                            return;
+                        }
                     }
                 }
                 // 6. Mã hóa từng khối
@@ -364,6 +369,11 @@ namespace Lab2_anmmt
                         if (hexn.Length % 2 != 0)
                             hexn = "0" + hexn;
                         partSize = (hexn.Length) / 2;
+                        if (partSize - 1 == 0)
+                        {
+                            MessageBox.Show("BlockSize = 0 - RSA cannot work");
+                            return;
+                        }
                     }
                 }
                 List<byte[]> parts = new List<byte[]>();
