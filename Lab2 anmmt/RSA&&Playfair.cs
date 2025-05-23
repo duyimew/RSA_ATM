@@ -29,42 +29,75 @@ namespace Lab2_anmmt
         {
             try
             {
-                string decp = RSA.GeneratePrime(128).ToString();
-                string decq = "";
-                while (true)
+                if (btn_Random.Text == "Random")
                 {
-                    decq = RSA.GeneratePrime(128).ToString();
-                    if (decq != decp) break; // đảm bảo p khác q
+                    string decp = RSA.GeneratePrime(128).ToString();
+                    string decq = "";
+                    while (true)
+                    {
+                        decq = RSA.GeneratePrime(128).ToString();
+                        if (decq != decp) break; // đảm bảo p khác q
+                    }
+
+                    BigInteger p = BigInteger.Parse(decp);
+                    BigInteger q = BigInteger.Parse(decq);
+
+                    //Tính phi(n)
+                    BigInteger phi_n = RSA.CalculatePhi_N(p, q);
+
+
+                    //Tính e
+                    BigInteger dece = 0;
+                    dece = RSA.GenerateE(dece, phi_n);
+                    tb_valueE.Text = dece.ToString();
+
+                    //Tính d
+                    BigInteger d = RSA.CalculateD(dece, p, q);
+
+
+                    //Tính n
+                    BigInteger n = RSA.CalculateN(p, q);
+
+                    convertTypeForRandom(decp, decq, d.ToString(), n.ToString(), dece.ToString(), phi_n.ToString());
                 }
-
-                BigInteger p = BigInteger.Parse(decp);
-                BigInteger q = BigInteger.Parse(decq);
-
-                //Tính phi(n)
-                BigInteger phi_n = RSA.CalculatePhi_N(p, q);
-                
-                
-                //Tính e
-                BigInteger dece = 0;
-                dece = RSA.GenerateE(dece, phi_n);
-                tb_valueE.Text = dece.ToString();
-
-                //Tính d
-                BigInteger d = RSA.CalculateD(dece, p, q);
-                
-
-                //Tính n
-                BigInteger n = RSA.CalculateN(p, q);
-
-                convertTypeForRandom(decp, decq, d.ToString(), n.ToString(), dece.ToString(), phi_n.ToString());
-                
+                else if(btn_Random.Text == "Tính D")
+                {
+                    BigInteger n = BigInteger.Parse(tb_valueP.Text);
+                    BigInteger dece = BigInteger.Parse(tb_valueE.Text);
+                    var result = IsProductOfTwoPrimes(n, out BigInteger p, out BigInteger q);
+                    if (!result)
+                    {
+                        MessageBox.Show("Nhập lại N. N phải là tích của đúng hai số nguyên tố");
+                        return;
+                    }
+                    BigInteger d = RSA.CalculateD(dece, p, q);
+                    tb_valueQ.Text = d.ToString();
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        
+        private bool IsProductOfTwoPrimes(BigInteger n, out BigInteger prime1, out BigInteger prime2)
+        {
+            prime1 = prime2 = 0;
+            for (BigInteger i = 2; i * i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    BigInteger j = n / i;
+                    if (RSA.IsPrime(i) && RSA.IsPrime(j))
+                    {
+                        prime1 = i;
+                        prime2 = j;
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
         public void convertTypeForRandom(string decp, string decq, string d, string n, string dece, string phi_n)
         {
             if (!radioButton1.Checked)
@@ -109,42 +142,51 @@ namespace Lab2_anmmt
         {
             try
             {
-
-                // 1. Lấy giá trị p, q, e từ giao diện
-                string sp = tb_valueP.Text;
-                string sq = tb_valueQ.Text;
-                string se = tb_valueE.Text;
                 BigInteger p = 0;
                 BigInteger q = 0;
                 BigInteger dece = 0;
-                
-                if (!radioButton1.Checked)
+                BigInteger n = 0;
+                BigInteger phi_n = 0;
+                BigInteger d = 0;
+                if (radioButton12.Checked)
                 {
-                    p = BigInteger.Parse(RSA.ConvertNumber(sp, "hex", "dec"));
-                    q = BigInteger.Parse(RSA.ConvertNumber(sq, "hex", "dec"));
-                    dece = BigInteger.Parse(RSA.ConvertNumber(se, "hex", "dec"));
-                }  // nếu người dùng nhập dưới dạng hex
+                    // 1. Lấy giá trị p, q, e từ giao diện
+                    string sp = tb_valueP.Text;
+                    string sq = tb_valueQ.Text;
+                    string se = tb_valueE.Text;
+                    if (!radioButton1.Checked)
+                    {
+                        p = BigInteger.Parse(RSA.ConvertNumber(sp, "hex", "dec"));
+                        q = BigInteger.Parse(RSA.ConvertNumber(sq, "hex", "dec"));
+                        dece = BigInteger.Parse(RSA.ConvertNumber(se, "hex", "dec"));
+                    }  // nếu người dùng nhập dưới dạng hex
+                    else
+                    {
+                        p = BigInteger.Parse(sp);
+                        q = BigInteger.Parse(sq);
+                        dece = BigInteger.Parse(se);
+                    } // nếu là dec
+
+
+
+                    if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
+                    {
+                        MessageBox.Show("Chỉ được sử dụng các số nguyên tố cho p và q.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+
+                    n = RSA.CalculateN(p, q);
+                    phi_n = RSA.CalculatePhi_N(p, q);
+                    d = RSA.CalculateD(dece, p, q);
+                    convertTypeForEnOrDe(d.ToString(), n.ToString(), phi_n.ToString());
+                }
                 else
                 {
-                    p = BigInteger.Parse(sp);
-                    q = BigInteger.Parse(sq);
-                    dece = BigInteger.Parse(se);
-                } // nếu là dec
-
-
-
-                if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
-                {
-                    MessageBox.Show("Chỉ được sử dụng các số nguyên tố cho p và q.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    n = BigInteger.Parse(tb_valueP.Text);
+                    d = BigInteger.Parse(tb_valueQ.Text);
+                    dece = BigInteger.Parse(tb_valueE.Text);
                 }
-
-
-                BigInteger n = RSA.CalculateN(p, q);
-                BigInteger phi_n = RSA.CalculatePhi_N(p, q);
-                BigInteger d = RSA.CalculateD(dece, p, q);
-                convertTypeForEnOrDe(d.ToString(), n.ToString(), phi_n.ToString());
-
                 // 3. Xác định định dạng input và output từ radioButton
                 string typeinput = getInputType();
 
@@ -168,16 +210,27 @@ namespace Lab2_anmmt
                 }
                 else
                 {
-                    // tự tính blockSize dựa trên độ dài của p và q
-                    string hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex").TrimStart('0');
-                    if (BigInteger.Parse(RSA.ConvertNumber(hexp, "hex", "dec")) != p) hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex");
-                    if (hexp.Length % 2 != 0)
-                        hexp = "0" + hexp;
-                    string hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex").TrimStart('0');
-                    if (BigInteger.Parse(RSA.ConvertNumber(hexq, "hex", "dec")) != q) hexq = RSA.ConvertNumber(p.ToString(), "dec", "hex");
-                    if (hexq.Length % 2 != 0)
-                        hexq = "0" + hexq;
-                    blockSize = (hexp.Length + hexq.Length) / 2 - 1;
+                    if (radioButton12.Checked)
+                    {
+                        // tự tính blockSize dựa trên độ dài của p và q
+                        string hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex").TrimStart('0');
+                        if (BigInteger.Parse(RSA.ConvertNumber(hexp, "hex", "dec")) != p) hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex");
+                        if (hexp.Length % 2 != 0)
+                            hexp = "0" + hexp;
+                        string hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex").TrimStart('0');
+                        if (BigInteger.Parse(RSA.ConvertNumber(hexq, "hex", "dec")) != q) hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex");
+                        if (hexq.Length % 2 != 0)
+                            hexq = "0" + hexq;
+                        blockSize = (hexp.Length + hexq.Length) / 2 - 1;
+                    }
+                    else
+                    {
+                        string hexn = RSA.ConvertNumber(n.ToString(), "dec", "hex").TrimStart('0');
+                        if (BigInteger.Parse(RSA.ConvertNumber(hexn, "hex", "dec")) != n) hexn = RSA.ConvertNumber(n.ToString(), "dec", "hex");
+                        if (hexn.Length % 2 != 0)
+                            hexn = "0" + hexn;
+                        blockSize = (hexn.Length) / 2 - 1;
+                    }
                 }
                 // 6. Mã hóa từng khối
                 StringBuilder fullHexBuilder = new StringBuilder();
@@ -226,47 +279,53 @@ namespace Lab2_anmmt
             }
         }
 
-        
-
-
-
-
         private void btn_Decrypt_Click_1(object sender, EventArgs e)
         {
             try
             {
-                string sp = tb_valueP.Text;
-                string sq = tb_valueQ.Text;
-                string se = tb_valueE.Text;
                 BigInteger p = 0;
                 BigInteger q = 0;
                 BigInteger eValue = 0;
-                
-                if (!radioButton1.Checked)
+                BigInteger n = 0;
+                BigInteger phi_n = 0;
+                BigInteger d = 0;
+                if (radioButton12.Checked)
                 {
-                    p = BigInteger.Parse(RSA.ConvertNumber(sp, "hex", "dec"));
-                    q = BigInteger.Parse(RSA.ConvertNumber(sq, "hex", "dec"));
-                    eValue = BigInteger.Parse(RSA.ConvertNumber(se, "hex", "dec"));
+                    string sp = tb_valueP.Text;
+                    string sq = tb_valueQ.Text;
+                    string se = tb_valueE.Text;
+
+                    if (!radioButton1.Checked)
+                    {
+                        p = BigInteger.Parse(RSA.ConvertNumber(sp, "hex", "dec"));
+                        q = BigInteger.Parse(RSA.ConvertNumber(sq, "hex", "dec"));
+                        eValue = BigInteger.Parse(RSA.ConvertNumber(se, "hex", "dec"));
+                    }
+                    else
+                    {
+                        p = BigInteger.Parse(sp);
+                        q = BigInteger.Parse(sq);
+                        eValue = BigInteger.Parse(se);
+                    }
+
+                    if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
+                    {
+                        MessageBox.Show("Chỉ được sử dụng các số nguyên tố cho p và q.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+
+                    n = RSA.CalculateN(p, q);
+                    phi_n = RSA.CalculatePhi_N(p, q);
+                    d = RSA.CalculateD(eValue, p, q);
+                    convertTypeForEnOrDe(d.ToString(), n.ToString(), phi_n.ToString());
                 }
                 else
                 {
-                    p = BigInteger.Parse(sp);
-                    q = BigInteger.Parse(sq);
-                    eValue = BigInteger.Parse(se);
+                    n = BigInteger.Parse(tb_valueP.Text);
+                    d = BigInteger.Parse(tb_valueQ.Text);
+                    eValue = BigInteger.Parse(tb_valueE.Text);
                 }
-
-                if (!(RSA.IsPrime(p) && RSA.IsPrime(q)))
-                {
-                    MessageBox.Show("Chỉ được sử dụng các số nguyên tố cho p và q.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-
-                BigInteger n = RSA.CalculateN(p, q);
-                BigInteger phi_n = RSA.CalculatePhi_N(p, q);
-                BigInteger d = RSA.CalculateD(eValue, p, q);
-                convertTypeForEnOrDe(d.ToString(), n.ToString(), phi_n.ToString());
-
                 string typeinput = getInputType();
                 
                 string typeoutput = getOutputType();
@@ -275,7 +334,6 @@ namespace Lab2_anmmt
 
                 byte[] fullBytes = null;
                 fullBytes = RSA.getMessageByte(fullBytes, typeinput, encryptedMessage);
-             
                 if (fullBytes == null) return;
 
                 List<byte> finalDecryptedBytes = null;
@@ -287,15 +345,26 @@ namespace Lab2_anmmt
                 }
                 else
                 {
-                    string hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex").TrimStart('0');
-                    if (BigInteger.Parse(RSA.ConvertNumber(hexp, "hex", "dec")) != p) hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex");
-                    if (hexp.Length % 2 != 0)
-                        hexp = "0" + hexp;
-                    string hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex").TrimStart('0');
-                    if (BigInteger.Parse(RSA.ConvertNumber(hexq, "hex", "dec")) != q) hexq = RSA.ConvertNumber(p.ToString(), "dec", "hex");
-                    if (hexq.Length % 2 != 0)
-                        hexq = "0" + hexq;
-                    partSize = (hexp.Length + hexq.Length) / 2;
+                    if (radioButton12.Checked)
+                    {
+                        string hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex").TrimStart('0');
+                        if (BigInteger.Parse(RSA.ConvertNumber(hexp, "hex", "dec")) != p) hexp = RSA.ConvertNumber(p.ToString(), "dec", "hex");
+                        if (hexp.Length % 2 != 0)
+                            hexp = "0" + hexp;
+                        string hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex").TrimStart('0');
+                        if (BigInteger.Parse(RSA.ConvertNumber(hexq, "hex", "dec")) != q) hexq = RSA.ConvertNumber(q.ToString(), "dec", "hex");
+                        if (hexq.Length % 2 != 0)
+                            hexq = "0" + hexq;
+                        partSize = (hexp.Length + hexq.Length) / 2;
+                    }
+                    else 
+                    {
+                        string hexn = RSA.ConvertNumber(n.ToString(), "dec", "hex").TrimStart('0');
+                        if (BigInteger.Parse(RSA.ConvertNumber(hexn, "hex", "dec")) != n) hexn = RSA.ConvertNumber(n.ToString(), "dec", "hex");
+                        if (hexn.Length % 2 != 0)
+                            hexn = "0" + hexn;
+                        partSize = (hexn.Length) / 2;
+                    }
                 }
                 List<byte[]> parts = new List<byte[]>();
 
@@ -574,5 +643,22 @@ namespace Lab2_anmmt
         {
             DisplayMatrix();
         }
+
+        private void radioButton12_CheckedChanged(object sender, EventArgs e)
+        {
+                label9.Visible = radioButton12.Checked;
+                label10.Visible = radioButton12.Checked;
+                label11.Visible = radioButton12.Checked;
+                tb_valueN.Visible = radioButton12.Checked;
+                tb_valueD.Visible = radioButton12.Checked;
+                tb_valuePhi_n.Visible = radioButton12.Checked;
+                label1.Text = radioButton12.Checked ? "p":"n";
+                label2.Text = radioButton12.Checked ? "q":"d";
+                btn_Random.Text = radioButton12.Checked ? "Random" : "Tính D";
+                groupBox3.Visible = radioButton12.Checked;
+        }
+
+
+
     }
 }

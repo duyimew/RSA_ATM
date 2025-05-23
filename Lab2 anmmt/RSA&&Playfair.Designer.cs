@@ -69,7 +69,13 @@
             this.tb_valueN = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rb_5x5 = new System.Windows.Forms.RadioButton();
+            this.rb_6x6 = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -81,22 +87,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tbl_Matrix = new System.Windows.Forms.TableLayoutPanel();
-            this.rb_5x5 = new System.Windows.Forms.RadioButton();
-            this.rb_6x6 = new System.Windows.Forms.RadioButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Random
             // 
-            this.btn_Random.Location = new System.Drawing.Point(911, 20);
+            this.btn_Random.Location = new System.Drawing.Point(908, 7);
             this.btn_Random.Name = "btn_Random";
             this.btn_Random.Size = new System.Drawing.Size(82, 36);
             this.btn_Random.TabIndex = 13;
@@ -509,6 +513,7 @@
             this.tabPage1.Controls.Add(this.tb_valueP);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -518,6 +523,39 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "RSA ";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.radioButton11);
+            this.groupBox6.Controls.Add(this.radioButton12);
+            this.groupBox6.Location = new System.Drawing.Point(908, 55);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(92, 53);
+            this.groupBox6.TabIndex = 29;
+            this.groupBox6.TabStop = false;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(4, 30);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(71, 17);
+            this.radioButton11.TabIndex = 15;
+            this.radioButton11.Text = "Enter Key";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Checked = true;
+            this.radioButton12.Location = new System.Drawing.Point(4, 10);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(79, 17);
+            this.radioButton12.TabIndex = 14;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.Text = "Enter Prime";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            this.radioButton12.CheckedChanged += new System.EventHandler(this.radioButton12_CheckedChanged);
             // 
             // tabPage2
             // 
@@ -540,6 +578,39 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Playfair";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rb_5x5);
+            this.groupBox5.Controls.Add(this.rb_6x6);
+            this.groupBox5.Location = new System.Drawing.Point(371, 83);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(97, 66);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            // 
+            // rb_5x5
+            // 
+            this.rb_5x5.AutoSize = true;
+            this.rb_5x5.Checked = true;
+            this.rb_5x5.Location = new System.Drawing.Point(6, 19);
+            this.rb_5x5.Name = "rb_5x5";
+            this.rb_5x5.Size = new System.Drawing.Size(42, 17);
+            this.rb_5x5.TabIndex = 17;
+            this.rb_5x5.TabStop = true;
+            this.rb_5x5.Text = "5x5";
+            this.rb_5x5.UseVisualStyleBackColor = true;
+            // 
+            // rb_6x6
+            // 
+            this.rb_6x6.AutoSize = true;
+            this.rb_6x6.Location = new System.Drawing.Point(6, 42);
+            this.rb_6x6.Name = "rb_6x6";
+            this.rb_6x6.Size = new System.Drawing.Size(42, 17);
+            this.rb_6x6.TabIndex = 18;
+            this.rb_6x6.Text = "6x6";
+            this.rb_6x6.UseVisualStyleBackColor = true;
+            this.rb_6x6.CheckedChanged += new System.EventHandler(this.rb_6x6_CheckedChanged);
             // 
             // label15
             // 
@@ -657,39 +728,6 @@
             this.tbl_Matrix.Size = new System.Drawing.Size(296, 150);
             this.tbl_Matrix.TabIndex = 6;
             // 
-            // rb_5x5
-            // 
-            this.rb_5x5.AutoSize = true;
-            this.rb_5x5.Checked = true;
-            this.rb_5x5.Location = new System.Drawing.Point(6, 19);
-            this.rb_5x5.Name = "rb_5x5";
-            this.rb_5x5.Size = new System.Drawing.Size(42, 17);
-            this.rb_5x5.TabIndex = 17;
-            this.rb_5x5.TabStop = true;
-            this.rb_5x5.Text = "5x5";
-            this.rb_5x5.UseVisualStyleBackColor = true;
-            // 
-            // rb_6x6
-            // 
-            this.rb_6x6.AutoSize = true;
-            this.rb_6x6.Location = new System.Drawing.Point(6, 42);
-            this.rb_6x6.Name = "rb_6x6";
-            this.rb_6x6.Size = new System.Drawing.Size(42, 17);
-            this.rb_6x6.TabIndex = 18;
-            this.rb_6x6.Text = "6x6";
-            this.rb_6x6.UseVisualStyleBackColor = true;
-            this.rb_6x6.CheckedChanged += new System.EventHandler(this.rb_6x6_CheckedChanged);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.rb_5x5);
-            this.groupBox5.Controls.Add(this.rb_6x6);
-            this.groupBox5.Location = new System.Drawing.Point(371, 83);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(97, 66);
-            this.groupBox5.TabIndex = 19;
-            this.groupBox5.TabStop = false;
-            // 
             // RSAPlayfair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,6 +748,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -776,5 +816,8 @@
         private System.Windows.Forms.RadioButton rb_6x6;
         private System.Windows.Forms.RadioButton rb_5x5;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
     }
 }
